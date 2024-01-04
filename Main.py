@@ -16,3 +16,12 @@ while True: # The main game loop.
         if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
             break
         print('Type one of r, p, s,')
+
+    if playerMove == 'r':
+        print('Rock versus ...')
+    elif playerMove == 'p':
+        print('Paper versus ...')
+    elif playerMove == 's':
+        print('Scissors versus ...')
+
+

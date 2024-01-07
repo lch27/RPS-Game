@@ -24,4 +24,18 @@ while True: # The main game loop.
     elif playerMove == 's':
         print('Scissors versus ...')
 
+    randomNum = random.randint(1, 3)
+    if randomNum == 1:
+        computerMove == 'r'
+        print('Rock')
+    elif randomNum == 2:
+        computerMove == 'p'
+        print('Paper')
+    elif randomNum == '3':
+        computerMove == 's'
+        print('Scissors')
+
+
+
+
 

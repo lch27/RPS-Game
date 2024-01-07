@@ -6,11 +6,16 @@ wins = 0
 losses = 0
 ties = 0
 
-while True: # The main game loop.
+while True:  # The main game loop.
     print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))
-    while True: #The player input loop.
+    while True:  # The player input loop.
         print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')
-        playerMove = input()
+
+        def get_user_input():
+            return input()
+
+        playerMove = get_user_input()
+
         if playerMove == 'q':
             sys.exit()
         if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
@@ -26,13 +31,13 @@ while True: # The main game loop.
 
     randomNum = random.randint(1, 3)
     if randomNum == 1:
-        computerMove == 'r'
+        computerMove = 'r'
         print('Rock')
     elif randomNum == 2:
-        computerMove == 'p'
+        computerMove = 'p'
         print('Paper')
-    elif randomNum == '3':
-        computerMove == 's'
+    elif randomNum == 3:  # Corrected from '3'
+        computerMove = 's'
         print('Scissors')
 
     if playerMove == computerMove:
@@ -56,10 +61,3 @@ while True: # The main game loop.
     elif playerMove == 's' and computerMove == 'r':
         print('You lose!')
         losses += 1
-
-
-
-
-
-
-
